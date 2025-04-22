@@ -85,7 +85,7 @@ Top Down Integration Test
 
 ```javascript
 
-jest.mock('../modules/isValidDate'.isValidDate, () => ({
+jest.mock('../modules/isValidDate', () => ({
   isValidDate: jest.fn().mockReturnValue(true)
 }))
 
@@ -95,7 +95,7 @@ jest.mock('../modules/isValidDate'.isValidDate, () => ({
 
 ```javascript
 
-jest.mock('../modules/getNextDate'.getNextDate, () => ({
+jest.mock('../modules/getNextDate', () => ({
   getNextDate: jest.fn().mockImplementation((month, day, year) => {
     return { month: 4, day: 18, year: 2024 }; // Mocked output for 4/18/2024
   })
@@ -107,7 +107,7 @@ jest.mock('../modules/getNextDate'.getNextDate, () => ({
 
 ```javascript
 
-jest.mock('../modules/getDayOfWeek'.getDayOfWeek, () => ({
+jest.mock('../modules/getDayOfWeek', () => ({
   getDayOfWeek: jest.fn().mockReturnValue('Wednesday') // Mocked output for Wednesday (4/17/2024)
 }));
 
